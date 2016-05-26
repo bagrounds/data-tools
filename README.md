@@ -4,7 +4,7 @@ Tools for data manipulation
 
 [![GitHub Downloads][github-img]][github-url]
 [![Travis-CI][travis-img]][travis-url]
-[![Coveralls][coveralls-img]][coveralls-url]
+[![Code Climate Coverage][codeclimate-coverage-img]][codeclimate-coverage-url]
 [![Code Climate][codeclimate-img]][codeclimate-url]
 [![Code Climate][codeclimate-issues-img]][codeclimate-issues-url]
 
@@ -29,9 +29,8 @@ Tools for data manipulation
 [travis-img]: https://img.shields.io/travis/bagrounds/data-tools/master.svg
 [travis-url]: https://travis-ci.org/bagrounds/data-tools
 
-[coveralls-img]: https://coveralls.io/repos/github/bagrounds/data-tools/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/bagrounds/data-tools?branch=master
-
+[codeclimate-coverage-url]: https://codeclimate.com/github/bagrounds/data-tools/coverage
+[codeclimate-coverage-img]: https://codeclimate.com/github/bagrounds/data-tools/badges/coverage.svg
 [codeclimate-img]: https://codeclimate.com/github/bagrounds/data-tools/badges/gpa.svg
 [codeclimate-url]: https://codeclimate.com/github/bagrounds/data-tools
 
