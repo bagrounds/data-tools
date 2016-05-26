@@ -12,10 +12,17 @@
 
   var typeCheck = require('type-check').typeCheck;
 
+  var dataSets = require('./lib/data-sets');
+  var strings = require('./lib/strings');
+
   /*****************************************************************************
    * exports
    */
-  module.exports = dataTools;
+  module.exports = {
+    dataTools: dataTools,
+    dataSetUtils: dataSets,
+    stringUtils: strings
+  };
 
 
   /**
