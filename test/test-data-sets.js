@@ -49,7 +49,11 @@
           {a:null,b:null,c:null,d:null}
         ];
 
-        var uniformDataSet = dataSets.makeTabular(nonUniformDataSet);
+        var options = {
+          dataSet: nonUniformDataSet
+        };
+
+        var uniformDataSet = dataSets.makeTabular(options);
 
         expect(uniformDataSet).to.deep.equal(expectedUniformDataSet);
       });
@@ -281,7 +285,11 @@
           f: 'unknown type'
         };
 
-        var rowTypes = dataSets.rowTypes(row);
+        var options = {
+          row: row
+        };
+
+        var rowTypes = dataSets.rowTypes(options);
 
         expect(rowTypes).to.deep.equal(expectedRowTypes);
       });
