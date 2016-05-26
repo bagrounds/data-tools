@@ -1,0 +1,30 @@
+{
+  "name": "data-tools",
+  "version": "0.1.0",
+  "main": "data-tools.js",
+  "private": true,
+  "scripts": {
+    "test": "_mocha",
+    "predocument": "rm -rf docs",
+    "document": "jsdoc --destination docs -c .jsdoc.json -r",
+    "precoverage": "rm -rf coverage",
+    "coverage": "istanbul cover _mocha",
+    "postcoverage": "codeclimate-test-reporter < coverage/lcov.info",
+    "build": "npm run lint && npm run coverage && npm run document",
+    "lint": "eslint *.js lib/**/*.js test/**/*.js"
+  },
+  "dependencies": {
+    "argparse": "^1.0.7",
+    "lodash": "^4.13.1",
+    "type-check": "^0.3.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.3.1",
+    "eslint": "^2.9.0",
+    "istanbul": "^0.4.3",
+    "jsdoc": "^3.4.0",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0"
+  }
+}
