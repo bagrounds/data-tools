@@ -194,5 +194,116 @@
 
       });
     });
+
+    describe('isValidDataSet', function(){
+
+      it('should recognize a valid data set', function(done){
+
+        var validDataSet = [
+          {a:'a',b:'b',c:3},
+          {a:null,b:'e',c:6},
+          {a:'g',b:'h',c:null}
+        ];
+
+        var options = {
+          dataSet: validDataSet
+        };
+
+        dataSets.isValidDataSet(options, function(error, result){
+
+          expect(result).to.be.true;
+
+          done();
+        });
+      });
+
+      it('should reject if row lengths differ', function(done){
+
+        var invalidDataSet = [
+          {a:'a',b:'b',c:3},
+          {a:null,b:'e'},
+          {a:'g',b:'h',c:null}
+        ];
+
+        var options = {
+          dataSet: invalidDataSet
+        };
+
+        dataSets.isValidDataSet(options, function(error, result){
+
+          expect(result).to.be.false;
+
+          done();
+        });
+      });
+
+      it('should reject if types in a column differ', function(done){
+
+        var invalidDataSet = [
+          {a:'a',b:'b',c:3},
+          {a:null,b:5,c:6},
+          {a:'g',b:'h',c:null}
+        ];
+
+        var options = {
+          dataSet: invalidDataSet
+        };
+
+        dataSets.isValidDataSet(options, function(error, result){
+
+          expect(result).to.be.false;
+
+          done();
+        });
+      });
+
+      it('should reject if column names differ', function(done){
+
+        var invalidDataSet = [
+          {a:'a',b:'b',c:3},
+          {a:null,d:'e',c:6},
+          {a:'g',b:'h',c:null}
+        ];
+
+        var options = {
+          dataSet: invalidDataSet
+        };
+
+        dataSets.isValidDataSet(options, function(error, result){
+
+          expect(result).to.be.false;
+
+          done();
+        });
+      });
+    });
+
+    describe('rowTypes', function(){
+
+      it('should identify types', function() {
+
+        var row = {
+          a: 1,
+          b: '2',
+          c: [],
+          d: {},
+          e: null,
+          f: undefined
+        };
+
+        var expectedRowTypes = {
+          a: 'Number',
+          b: 'String',
+          c: 'Array',
+          d: 'Object',
+          e: 'Null',
+          f: 'unknown type'
+        };
+
+        var rowTypes = dataSets.rowTypes(row);
+
+        expect(rowTypes).to.deep.equal(expectedRowTypes);
+      });
+    });
   });
 })();
