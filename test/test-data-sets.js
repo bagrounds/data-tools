@@ -197,7 +197,7 @@
 
     describe('isValidDataSet', function(){
 
-      it('should recognize a valid data set', function(done){
+      it('should recognize a valid data set', function(){
 
         var validDataSet = [
           {a:'a',b:'b',c:3},
@@ -209,15 +209,11 @@
           dataSet: validDataSet
         };
 
-        dataSets.isValidDataSet(options, function(error, result){
+        expect(dataSets.isValidDataSet(options)).to.be.true;
 
-          expect(result).to.be.true;
-
-          done();
-        });
       });
 
-      it('should reject if row lengths differ', function(done){
+      it('should reject if row lengths differ', function(){
 
         var invalidDataSet = [
           {a:'a',b:'b',c:3},
@@ -229,15 +225,10 @@
           dataSet: invalidDataSet
         };
 
-        dataSets.isValidDataSet(options, function(error, result){
-
-          expect(result).to.be.false;
-
-          done();
-        });
+        expect(dataSets.isValidDataSet(options)).to.be.false;
       });
 
-      it('should reject if types in a column differ', function(done){
+      it('should reject if types in a column differ', function(){
 
         var invalidDataSet = [
           {a:'a',b:'b',c:3},
@@ -249,15 +240,10 @@
           dataSet: invalidDataSet
         };
 
-        dataSets.isValidDataSet(options, function(error, result){
-
-          expect(result).to.be.false;
-
-          done();
-        });
+        expect(dataSets.isValidDataSet(options)).to.be.false;
       });
 
-      it('should reject if column names differ', function(done){
+      it('should reject if column names differ', function(){
 
         var invalidDataSet = [
           {a:'a',b:'b',c:3},
@@ -269,12 +255,7 @@
           dataSet: invalidDataSet
         };
 
-        dataSets.isValidDataSet(options, function(error, result){
-
-          expect(result).to.be.false;
-
-          done();
-        });
+        expect(dataSets.isValidDataSet(options)).to.be.false;
       });
     });
 
