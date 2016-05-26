@@ -20,8 +20,8 @@
    */
   module.exports = {
     dataTools: dataTools,
-    dataSetUtils: dataSets,
-    stringUtils: strings
+    dataSets: dataSets,
+    strings: strings
   };
 
 
