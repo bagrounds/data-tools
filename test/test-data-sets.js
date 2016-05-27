@@ -33,7 +33,7 @@
           {a:'ii', d:'jj'},
           {b:'kk', c:1212},
           {b:'mm', d:'nn'},
-          {}
+          {a:undefined}
         ];
 
         var expectedUniformDataSet = [
