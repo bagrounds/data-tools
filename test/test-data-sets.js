@@ -199,7 +199,7 @@
       });
     });
 
-    describe('isValidDataSet', function(){
+    describe('isInvalidDataSet', function(){
 
       it('should recognize a valid data set', function(){
 
@@ -213,7 +213,7 @@
           dataSet: validDataSet
         };
 
-        expect(dataSets.isValidDataSet(options)).to.be.true;
+        expect(dataSets.isInvalidDataSet(options)).not.to.be.ok;
 
       });
 
@@ -229,14 +229,14 @@
           dataSet: invalidDataSet
         };
 
-        expect(dataSets.isValidDataSet(options)).to.be.false;
+        expect(dataSets.isInvalidDataSet(options)).to.be.ok;
       });
 
       it('should reject if types in a column differ', function(){
 
         var invalidDataSet = [
           {a:'a',b:'b',c:3},
-          {a:null,b:5,c:6},
+          {a:null,b:5,c:6}, // 2.b should be a string, not a number
           {a:'g',b:'h',c:null}
         ];
 
@@ -244,7 +244,7 @@
           dataSet: invalidDataSet
         };
 
-        expect(dataSets.isValidDataSet(options)).to.be.false;
+        expect(dataSets.isInvalidDataSet(options)).to.be.ok;
       });
 
       it('should reject if column names differ', function(){
@@ -259,7 +259,7 @@
           dataSet: invalidDataSet
         };
 
-        expect(dataSets.isValidDataSet(options)).to.be.false;
+        expect(dataSets.isInvalidDataSet(options)).to.be.ok;
       });
     });
 
