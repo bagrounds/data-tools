@@ -12,6 +12,7 @@
 
   var dataTools = require('../data-tools');
 
+
   /***************************************************************************
    * Tests
    */
@@ -21,6 +22,7 @@
 
       it('should preprocess data', function(){
 
+        expect(dataTools).to.be.ok;
       });
     });
   });
