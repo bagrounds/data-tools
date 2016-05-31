@@ -25,8 +25,10 @@
   }
 
   /**
+   * Doesn't do anything yet
    *
    * @function dataTools
+   *
    * @alias data-tools
    * @param {Object} options contains all function parameters
    * @param {Function} callback handles results
