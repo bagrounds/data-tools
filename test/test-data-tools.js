@@ -3,27 +3,23 @@
  */
 ;(function () {
   /* global describe, it */
-  'use strict';
+  'use strict'
 
   /***************************************************************************
    * Imports
    */
-  var expect = require('chai').expect;
+  var expect = require('chai').expect
 
-  var dataTools = require('../data-tools');
-
+  var dataTools = require('../data-tools')
 
   /***************************************************************************
    * Tests
    */
   describe('data-tools', function () {
-
-    describe('preprocess', function() {
-
-      it('should preprocess data', function(){
-
-        expect(dataTools).to.be.ok;
-      });
-    });
-  });
-})();
+    describe('preprocess', function () {
+      it('should preprocess data', function () {
+        expect(dataTools).to.be.ok
+      })
+    })
+  })
+})()

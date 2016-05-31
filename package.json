@@ -11,7 +11,8 @@
     "coverage": "istanbul cover _mocha",
     "postcoverage": "codeclimate-test-reporter < coverage/lcov.info",
     "build": "npm run lint && npm run coverage && npm run document",
-    "lint": "eslint *.js lib/**/*.js test/**/*.js"
+    "prelint": "standard-format -w",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "argparse": "^1.0.7",
@@ -25,6 +26,7 @@
     "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
     "mocha": "^2.4.5",
-    "mocha-lcov-reporter": "^1.2.0"
+    "mocha-lcov-reporter": "^1.2.0",
+    "standard-format": "^2.2.1"
   }
 }
