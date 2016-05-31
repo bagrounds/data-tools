@@ -2,7 +2,12 @@
   "name": "data-tools",
   "version": "0.2.1",
   "main": "data-tools.js",
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bagrounds/data-tools.git"
+  },
+  "license": "MIT",
   "scripts": {
     "pretest": "npm run lint",
     "test": "_mocha",
@@ -33,5 +38,12 @@
     "mocha": "^2.4.5",
     "mocha-lcov-reporter": "^1.2.0",
     "standard-format": "^2.2.1"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "docs",
+    "prep": [
+      "document"
+    ],
+    "noprompt": false
   }
 }
