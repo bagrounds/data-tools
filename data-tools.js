@@ -6,7 +6,7 @@
 ;(function () {
   'use strict'
 
-  /*****************************************************************************
+  /**
    * imports
    */
 
@@ -15,7 +15,7 @@
   var dataSets = require('./lib/data-sets')
   var strings = require('./lib/strings')
 
-  /*****************************************************************************
+  /**
    * exports
    */
   module.exports = {
@@ -42,7 +42,7 @@
     callback(new Error('sorry, not implemented yet'))
   }
 
-  /*****************************************************************************
+  /**
    * Define helper functions
    */
 
@@ -56,7 +56,7 @@
    * @returns {Error|Boolean} any errors due to invalid inputs
    */
   function invalidOptions (options) {
-    if (! typeCheck('Object', options)) {
+    if (!typeCheck('Object', options)) {
       var message = 'options should be an object'
 
       return new Error(message)

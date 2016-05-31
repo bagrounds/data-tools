@@ -5,14 +5,14 @@
   /* global describe, it */
   'use strict'
 
-  /***************************************************************************
+  /**
    * Imports
    */
   var expect = require('chai').expect
 
   var strings = require('../lib/strings')
 
-  /***************************************************************************
+  /**
    * Tests
    */
   describe('strings', function () {
