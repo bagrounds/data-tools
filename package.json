@@ -1,9 +1,10 @@
 {
   "name": "data-tools",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "main": "data-tools.js",
   "private": true,
   "scripts": {
+    "pretest": "npm run lint",
     "test": "_mocha",
     "predocument": "rm -rf docs",
     "document": "jsdoc --destination docs -c .jsdoc.json -r",
