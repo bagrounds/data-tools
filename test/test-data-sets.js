@@ -1,5 +1,5 @@
 /**
- * Tests for serve-function-module-template
+ * Tests for data-sets
  */
 ;(function () {
   /* global describe, it */
