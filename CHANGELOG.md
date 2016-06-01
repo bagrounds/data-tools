@@ -25,6 +25,11 @@ Please use: Added, Changed, Deprecated, Removed, Fixed, or Security as labels.
 ##### Security
 * ...
 
+
+#### 0.3.0 - (2016-06-01)
+##### Added
+* transform module with aggregate function
+
 #### 0.2.1 (2016-05-31)
 ##### Added
 * .codeclimate.yml

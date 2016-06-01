@@ -1,6 +1,6 @@
 {
   "name": "data-tools",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "data-tools.js",
   "private": false,
   "repository": {
