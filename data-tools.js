@@ -14,6 +14,7 @@
 
   var dataSets = require('./lib/data-sets')
   var strings = require('./lib/strings')
+  var transform = require('./lib/transform')
 
   /**
    * exports
@@ -21,7 +22,8 @@
   module.exports = {
     dataTools: dataTools,
     dataSets: dataSets,
-    strings: strings
+    strings: strings,
+    transform: transform
   }
 
   /**
