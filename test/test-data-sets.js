@@ -271,6 +271,29 @@
       })
     })
 
+    describe('removeColumn', function () {
+      it('should remove a column from the data set', function () {
+        var inputDataSet = [
+          {a: null, b: null, c: null, d: null, e: null},
+          {a: 'aa', b: null, c: 3, d: null, e: null}
+        ]
+
+        var expectedResult = [
+          {a: null, b: null, d: null, e: null},
+          {a: 'aa', b: null, d: null, e: null}
+        ]
+
+        var options = {
+          dataSet: inputDataSet,
+          column: 'c'
+        }
+
+        var resultDataSet = dataSets.removeColumn(options)
+
+        expect(resultDataSet).to.deep.equal(expectedResult)
+      })
+    })
+
     describe('removeEmptyColumns', function () {
       it('should remove empty columns from the data set', function () {
         var inputDataSet = [
