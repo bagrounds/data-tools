@@ -23,8 +23,20 @@
         var expectedResult = 12
 
         var parseNumberOptions = {
-          string: testString,
-          fromFront: true
+          string: testString
+        }
+
+        var result = strings.parseNumber(parseNumberOptions)
+
+        expect(result).to.equal(expectedResult)
+      })
+      it('parse 0', function () {
+        var testString = '0 mins'
+
+        var expectedResult = 0
+
+        var parseNumberOptions = {
+          string: testString
         }
 
         var result = strings.parseNumber(parseNumberOptions)
