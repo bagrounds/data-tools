@@ -1,6 +1,6 @@
 {
   "name": "data-tools",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "data-tools.js",
   "private": false,
   "repository": {
@@ -20,10 +20,9 @@
     "prelint": "standard-format -w",
     "lint": "eslint --ignore-path .gitignore .",
     "gh-pages": "gh-pages-deploy"
-
   },
   "dependencies": {
-    "argparse": "^1.0.7",
+    "json-2-csv": "^2.0.22",
     "lodash": "^4.13.1",
     "type-check": "^0.3.2"
   },
@@ -36,7 +35,6 @@
     "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
     "mocha": "^2.4.5",
-    "mocha-lcov-reporter": "^1.2.0",
     "standard-format": "^2.2.1"
   },
   "gh-pages-deploy": {
