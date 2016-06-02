@@ -15,6 +15,7 @@
   var dataSets = require('./lib/data-sets')
   var strings = require('./lib/strings')
   var transform = require('./lib/transform')
+  var format = require('./lib/format')
 
   /**
    * exports
@@ -23,7 +24,8 @@
     dataTools: dataTools,
     dataSets: dataSets,
     strings: strings,
-    transform: transform
+    transform: transform,
+    format: format
   }
 
   /**
