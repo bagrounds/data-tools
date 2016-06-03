@@ -1,6 +1,6 @@
 {
   "name": "data-tools",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "main": "data-tools.js",
   "private": false,
   "repository": {
@@ -22,7 +22,7 @@
     "gh-pages": "gh-pages-deploy"
   },
   "dependencies": {
-    "json-2-csv": "^2.0.22",
+    "json2csv": "^3.4.2",
     "lodash": "^4.13.1",
     "type-check": "^0.3.2"
   },

@@ -29,7 +29,7 @@
         expectedCsvOutput += 'a string,9,\n'
         expectedCsvOutput += 'another string,42,\n'
         expectedCsvOutput += 'abc,,198\n'
-        expectedCsvOutput += ',98,5\n'
+        expectedCsvOutput += ',98,5'
 
         var options = {
           dataSet: jsonInput
@@ -57,7 +57,7 @@
         expectedCsvOutput += 'a string\t9\t\n'
         expectedCsvOutput += 'another string\t42\t\n'
         expectedCsvOutput += 'abc\t\t198\n'
-        expectedCsvOutput += '\t98\t5\n'
+        expectedCsvOutput += '\t98\t5'
 
         var options = {
           dataSet: jsonInput,
