@@ -6,26 +6,18 @@
 ;(function () {
   'use strict'
 
-  /**
-   * imports
-   */
+  /* imports */
 
   var typeCheck = require('type-check').typeCheck
 
-  var dataSets = require('./lib/data-sets')
-  var strings = require('./lib/strings')
-  var transform = require('./lib/transform')
-  var format = require('./lib/format')
-
-  /**
-   * exports
-   */
+  /* exports */
   module.exports = {
     dataTools: dataTools,
-    dataSets: dataSets,
-    strings: strings,
-    transform: transform,
-    format: format
+    dataSets: require('./lib/data-sets'),
+    strings: require('./lib/strings'),
+    transform: require('./lib/transform'),
+    format: require('./lib/format'),
+    filter: require('./lib/filter')
   }
 
   /**
