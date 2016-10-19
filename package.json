@@ -14,8 +14,10 @@
     "predocument": "npm test && rm -rf docs",
     "document": "jsdoc --destination docs -c .jsdoc.json -r",
     "precoverage": "rm -rf coverage",
-    "coverage": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls",
-    "postcoverage": "codeclimate-test-reporter < coverage/lcov.info",
+    "coverage": "istanbul cover _mocha",
+    "prearchitecture": "mkdir -p architecture",
+    "architecture": "madge . --image architecture/architecture.svg -x 'test|coverage|docs'",
+    "postarchitecture": "madge . --image architecture/architecture-test.svg -x 'coverage|docs'",
     "build": "npm run coverage && npm run document",
     "prelint": "standard-format -w",
     "lint": "eslint --ignore-path .gitignore ."
@@ -32,7 +34,9 @@
     "eslint": "^2.9.0",
     "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
+    "madge": "^1.4.3",
     "mocha": "^2.4.5",
+    "showdown": "^1.4.3",
     "standard-format": "^2.2.1"
   }
 }
