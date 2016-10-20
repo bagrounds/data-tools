@@ -5,8 +5,8 @@
 # nodejs modules should be installed locally with npm install
 node_modules
 
-coverage
+/coverage
 
-docs
+/docs
 
 
