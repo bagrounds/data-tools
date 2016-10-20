@@ -12,6 +12,7 @@
   },
   "pages": {
     "script": [
+      "npm install",
       "npm run document",
       "npm run coverage",
       "npm run architecture",
