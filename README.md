@@ -2,13 +2,10 @@
 
 Tools for data manipulation
 
-[![GitHub Downloads][github-img]][github-url]
 [![Travis-CI][travis-img]][travis-url]
-[![Coveralls][coveralls-img]][coveralls-url]
 [![Code Climate][codeclimate-img]][codeclimate-url]
 [![Code Climate][codeclimate-issues-img]][codeclimate-issues-url]
 [![js-standard-style][standard-img]][standard-url]
-
 
 ## Installation
 
@@ -16,8 +13,18 @@ Tools for data manipulation
   $ npm install 'bagrounds/data-tools'
 ```
 
-## [Documentation][gh-pages-url]
+## [Documentation](docs/index.html)
 
+## [Test Coverage](coverage/lcov-report/index.html)
+
+## Architecture
+The following dependency graphs are automatically generated using [this](https://github.com/pahen/madge) tool. 3rd party modules are not shown.
+
+Without tests:
+![architecture](architecture/architecture.svg)
+
+With tests:
+![architecture](architecture/architecture-test.svg)
 
 ## Usage
 ...
@@ -38,19 +45,11 @@ Tools for data manipulation
 [standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [standard-url]: http://standardjs.com/
 
-[github-img]: https://img.shields.io/github/downloads/bagrounds/data-tools/total.svg
-[github-url]: https://github.com/bagrounds/data-tools
-
 [travis-img]: https://img.shields.io/travis/bagrounds/data-tools/master.svg
 [travis-url]: https://travis-ci.org/bagrounds/data-tools
-
-[coveralls-img]: https://coveralls.io/repos/github/bagrounds/data-tools/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/bagrounds/data-tools?branch=master
 
 [codeclimate-img]: https://codeclimate.com/github/bagrounds/data-tools/badges/gpa.svg
 [codeclimate-url]: https://codeclimate.com/github/bagrounds/data-tools
 
 [codeclimate-issues-img]: https://codeclimate.com/github/bagrounds/data-tools/badges/issue_count.svg
 [codeclimate-issues-url]: https://codeclimate.com/github/bagrounds/data-tools/issues
-
-[gh-pages-url]: http://bagrounds.github.io/data-tools

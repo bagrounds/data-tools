@@ -9,5 +9,22 @@
       "npm install",
       "npm test"
     ]
+  },
+  "pages": {
+    "script": [
+      "npm run document",
+      "npm run coverage",
+      "npm run architecture",
+      "mkdir -p pages/docs pages/coverage pages/architecture",
+      "showdown makehtml -i README.md -o pages/index.html",
+      "cp -r docs pages/",
+      "cp -r coverage pages/",
+      "cp -r architecture pages/",
+    ],
+    "artifacts": {
+      "paths": [
+        "pages"
+      ]
+    }
   }
 }
