@@ -13,11 +13,6 @@
   },
   "pages": {
     "stage": "deploy",
-    "script": [
-      "cp -r docs pages/",
-      "cp -r coverage pages/",
-      "cp -r architecture pages/",
-    ],
     "artifacts": {
       "paths": [
         "pages"
