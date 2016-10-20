@@ -9,17 +9,20 @@
     "script": [
       "npm install",
       "npm test"
+    ],
+    "except": [
+      "pages"
     ]
   },
   "pages": {
     "stage": "deploy",
     "artifacts": {
       "paths": [
-        "pages"
+        "public"
       ]
     },
     "only": [
-      "master"
+      "pages"
     ]
   }
 }
