@@ -1,6 +1,6 @@
 {
   "name": "data-tools",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "main": "data-tools.js",
   "private": false,
   "repository": {
@@ -18,9 +18,12 @@
     "prearchitecture": "mkdir -p architecture",
     "architecture": "madge . --image architecture/architecture.svg -x 'test|coverage|docs'",
     "postarchitecture": "madge . --image architecture/architecture-test.svg -x 'coverage|docs'",
+    "prepages": "mkdir -p pages",
+    "pages": "showdown makehtml -i README.md -o pages/index.html",
+    "postpages": "cp -r docs pages/ && cp -r coverage pages/ && cp -r architecture pages/",
     "build": "npm run coverage && npm run document",
     "prelint": "standard-format -w",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern 'pages' ."
   },
   "dependencies": {
     "json2csv": "^3.4.2",
