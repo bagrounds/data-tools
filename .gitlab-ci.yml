@@ -16,6 +16,7 @@
   },
   "pages": {
     "stage": "deploy",
+    "environment": "pages",
     "artifacts": {
       "paths": [
         "public"
