@@ -1,13 +1,36 @@
 {
   "image": "node:4",
   "stages": [
-    "test"
+    "test",
+    "deploy"
   ],
   "test": {
     "stage": "test",
     "script": [
       "npm install",
       "npm test"
+    ]
+  },
+  "pages": {
+    "stage": "deploy",
+    "script": [
+      "npm install",
+      "npm run document",
+      "npm run coverage",
+      "npm run architecture",
+      "mkdir -p pages/docs pages/coverage pages/architecture",
+      "showdown makehtml -i README.md -o pages/index.html",
+      "cp -r docs pages/",
+      "cp -r coverage pages/",
+      "cp -r architecture pages/",
+    ],
+    "artifacts": {
+      "paths": [
+        "pages"
+      ]
+    },
+    "only": [
+      "master"
     ]
   }
 }

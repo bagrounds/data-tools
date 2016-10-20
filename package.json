@@ -1,6 +1,6 @@
 {
   "name": "data-tools",
-  "version": "0.5.3",
+  "version": "0.5.5",
   "main": "data-tools.js",
   "private": false,
   "repository": {
@@ -14,8 +14,10 @@
     "predocument": "npm test && rm -rf docs",
     "document": "jsdoc --destination docs -c .jsdoc.json -r",
     "precoverage": "rm -rf coverage",
-    "coverage": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls",
-    "postcoverage": "codeclimate-test-reporter < coverage/lcov.info",
+    "coverage": "istanbul cover _mocha",
+    "prearchitecture": "mkdir -p architecture",
+    "architecture": "madge . --image architecture/architecture.svg -x 'test|coverage|docs'",
+    "postarchitecture": "madge . --image architecture/architecture-test.svg -x 'coverage|docs'",
     "build": "npm run coverage && npm run document",
     "prelint": "standard-format -w",
     "lint": "eslint --ignore-path .gitignore ."
@@ -27,12 +29,13 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "codeclimate-test-reporter": "^0.3.1",
-    "coveralls": "^2.11.9",
-    "eslint": "^2.9.0",
+    "codeclimate-test-reporter": "^0.4.0",
+    "eslint": "^3.8.1",
     "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
-    "mocha": "^2.4.5",
+    "madge": "^1.4.3",
+    "mocha": "^3.1.2",
+    "showdown": "^1.4.3",
     "standard-format": "^2.2.1"
   }
 }
