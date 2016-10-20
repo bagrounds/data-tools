@@ -1,7 +1,8 @@
 {
   "image": "node:4",
   "stages": [
-    "test"
+    "test",
+    "deploy"
   ],
   "test": {
     "stage": "test",
@@ -11,7 +12,9 @@
     ]
   },
   "pages": {
+    "stage": "deploy",
     "script": [
+      "npm install",
       "npm run document",
       "npm run coverage",
       "npm run architecture",
@@ -25,6 +28,9 @@
       "paths": [
         "pages"
       ]
-    }
+    },
+    "only": [
+      "master"
+    ]
   }
 }
