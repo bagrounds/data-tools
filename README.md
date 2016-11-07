@@ -10,7 +10,7 @@ Tools for data manipulation
 ## Installation
 
 ``` bash
-  $ npm install 'bagrounds/data-tools'
+  $ npm install 'data-tools'
 ```
 
 ## [Documentation](docs/index.html)
